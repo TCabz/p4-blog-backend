@@ -30,7 +30,7 @@ end
 
 group :production do
 # Use postgresql as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
+gem 'pg'
 end
 
 group :development do
