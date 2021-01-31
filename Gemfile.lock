@@ -153,7 +153,7 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
-  bootsnap (>= 1.4.2)
+  bootsnap (~> 1.4, >= 1.4.6)
   byebug
   dotenv-rails
   listen (~> 3.2)
