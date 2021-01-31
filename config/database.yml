@@ -1,9 +1,50 @@
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   user: ""
+#   password: ""
+#   host: localhost
+#   port: 5432
+
+# ## Development and test will pull the info from default to make use of your local postgres server
+# development:
+#   <<: *default
+#   database: blog_backend_development
+
+# test:
+#   <<: *default
+#   database: blog_backend_test
+
+# ## If you plan on deploying to Heroku, the setup below will make sure when you deploy to heroku it will be pointing to your heroku database.
+# production:
+#   <<: *default
+#   url: <%= ENV['https://p4-blog-backend-heroku.herokuapp.com/'] %>
+
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   username: <%= ENV['POSTGRES_USER'] %>
+#   password: <%= ENV['POSTGRES_PASSWORD'] %>
+#   pool: 5
+#   timeout: 5000
+#   host: <%= ENV['POSTGRES_HOST'] %>
+# development:
+#   <<: *default
+#   database: <%= ENV['POSTGRES_DEVELOPMENT_DB'] %>
+# test:
+#   <<: *default
+#   database: <%= ENV['POSTGRES_TEST_DB'] %>
+# production:
+#   <<: *default
+#   database: <%= ENV['POSTGRES_DB'] %>
+
 default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  user: ""
-  password: ""
+  user: tonycabezon
+  password: Teeohinwhy1!
   host: localhost
   port: 5432
 
@@ -19,4 +60,4 @@ test:
 ## If you plan on deploying to Heroku, the setup below will make sure when you deploy to heroku it will be pointing to your heroku database.
 production:
   <<: *default
-  url: <%= ENV['https://p4-blog-backend-heroku.herokuapp.com/'] %>
+  url: <%= ENV['DATABASE_URL'] %>
