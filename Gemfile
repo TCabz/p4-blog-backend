@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+gem 'sinatra', '1.0'
 
 ruby '2.7.2'
 gem 'dotenv-rails', groups: [:development, :test]
