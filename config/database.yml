@@ -24,4 +24,5 @@ test:
 production:
   <<: *default
   database: blog_backend_production
-  url: <%= ENV['https://p4-blog-backend-heroku.herokuapp.com/'] %>
+  # url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['postgres://sibgeunpnfrgmi:8580222e911e25f27f77be1b6e6086af1659a23e33fa47bd2d2e4ba01b5f1e2c@ec2-54-196-1-212.compute-1.amazonaws.com:5432/d3ecla3q023pem'] %>
