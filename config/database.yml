@@ -24,4 +24,4 @@ test:
 production:
   <<: *default
   database: blog_backend_production
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['https://p4-blog-backend-heroku.herokuapp.com/'] %>
